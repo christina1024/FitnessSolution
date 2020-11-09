@@ -7,9 +7,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext){
     return Scaffold(
-      backgroundColor: Color.fromRGBO(91, 223, 240,1),
+      backgroundColor: Color.fromRGBO(	12, 112, 125,1),
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(91, 223, 240,0.5),
+        backgroundColor: Color.fromRGBO(	12, 112, 125,0.5),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children:[
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         children: <Widget>[
           Container(
             margin: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-            color: Color.fromRGBO(40, 38, 44,0.1),
+            color: Color.fromRGBO(245, 245, 245,0.7),
             //padding: EdgeInsets.fromLTRB(50.0, 50.0, 50.0, 50.0),
             child:Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -52,19 +52,22 @@ class MyApp extends StatelessWidget {
 
           Container(
               margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 10.0),
-              color: Color.fromRGBO(40, 38, 44,0.1),
-              padding: EdgeInsets.fromLTRB(0.0, 20.0, 290.0, 0.0),
+              color: Color.fromRGBO(245, 245, 245,0.7),
+              //padding: EdgeInsets.fromLTRB(0.0, 10.0, 300.0, 120.0),
             child: Column(
               children: <Widget>[
                 Container(
-                  //padding: EdgeInsets.fromLTRB(0.0, 0.0, 290.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 10.0, 270.0, 20.0),
                   child: Text('Progress',
                   style: TextStyle(
                     fontSize: 20.0,
                   ),),
                 ),
                 Container(
-                  child:Text('Push ups                      200 done', style: TextStyle(fontSize: 15.0,),),
+                  child:Text('Push ups                          200 done', style: TextStyle(fontSize: 15.0,),),
+                ),
+                Container(
+                  padding: EdgeInsets.fromLTRB(0.0, 100.0, 350.0, 90.0),
                 ),
 
               ],
@@ -72,7 +75,7 @@ class MyApp extends StatelessWidget {
           ),
           RaisedButton(
             onPressed:(){},
-            child:Text('START', style: TextStyle(
+            child:Text('START WORKOUT', style: TextStyle(
               fontSize: 20.0,
               color: Color.fromRGBO(245, 245, 245,1),
             ),),
