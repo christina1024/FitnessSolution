@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fitness_solution/useful_classes/progress.dart';
+import 'package:fitness_solution/models/progress.dart';
 import 'package:fitness_solution/screens/timeSelection.dart';
 
 class Home extends StatelessWidget {
