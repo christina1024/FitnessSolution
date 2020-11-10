@@ -9,7 +9,7 @@ void main() => runApp(MaterialApp(
   initialRoute: '/login',
   routes: {
     '/login':(context) => LoginPage(),
-    '/home':(context) => Home(),
+   // '/home':(context) => Home(),
     '/timeSelection':(context) => TimeSelection(),
   },
 ));

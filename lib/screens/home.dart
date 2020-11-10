@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:fitness_solution/models/progress.dart';
 import 'package:fitness_solution/screens/timeSelection.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  final String name;
+  Home(this.name);
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   List<Progress> progress = [
     Progress(type: 'Push Ups', count: '200'),
@@ -14,7 +21,7 @@ class Home extends StatelessWidget {
     Progress(type: 'Sit Ups', count: '305'),
     Progress(type: 'Squat', count: '100'),
   ];
-  
+
   Widget progressTemplete(progress) {
     return Card(
       color: Color.fromRGBO(245, 245, 245, 0.7),
@@ -84,12 +91,12 @@ class Home extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(20.0, 10.0, 10.0, 10.0),
-                  child: Text(
-                    'Lisa John',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                    ),
-                  ),
+                  child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Welcome, ' + widget.name + '!', textAlign: TextAlign.center)
+          ],
+        ),
                 ),
               ],
             ),
