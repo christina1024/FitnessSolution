@@ -37,7 +37,7 @@ class _BodyState extends State<Body> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => HomePage(user.displayName)))
+                  builder: (context) => Home(user.displayName)))
         });
   }
 
