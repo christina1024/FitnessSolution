@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fitness_solution/Home.dart';
-import 'package:fitness_solution/Time_Selection.dart';
-
+import 'package:fitness_solution/screens/login.dart';
+import 'package:fitness_solution/screens/home.dart';
+import 'package:fitness_solution/screens/timeSelection.dart';
 
 void main() => runApp(MaterialApp(
   //home: NaveBar(),
-  initialRoute: '/home',
+  initialRoute: '/login',
   routes: {
+    '/login':(context) => LoginPage(),
     '/home':(context) => Home(),
-    '/time_selection':(context)=> Time_Selection(),
+    '/timeSelection':(context) => TimeSelection(),
   },
 ));
 
