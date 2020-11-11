@@ -1,5 +1,6 @@
 import 'package:fitness_solution/screens/home.dart';
 import 'package:fitness_solution/screens/navigate.dart';
+import 'package:fitness_solution/screens/startWorkout.dart';
 import 'package:flutter/material.dart';
 
 class TimeSelection extends StatefulWidget {
@@ -28,7 +29,12 @@ class _TimeSelectionState extends State<TimeSelection> {
             Container(),
             SizedBox(height: 30.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StartWorkout(widget.name, '2')));
+              },
               child: Text(
               '2 minutes section',
               style: TextStyle(
@@ -42,7 +48,12 @@ class _TimeSelectionState extends State<TimeSelection> {
               ),
               SizedBox(height: 30.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StartWorkout(widget.name, '5')));
+              },
               child: Text(
               '5 minutes section',
               style: TextStyle(
@@ -56,7 +67,12 @@ class _TimeSelectionState extends State<TimeSelection> {
               ),
               SizedBox(height: 30.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StartWorkout(widget.name, '10')));
+              },
               child: Text(
               '10 minutes section',
               style: TextStyle(
@@ -70,7 +86,12 @@ class _TimeSelectionState extends State<TimeSelection> {
               ),
               SizedBox(height: 30.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StartWorkout(widget.name, '20')));
+              },
               child: Text(
               '20 minutes section',
               style: TextStyle(
@@ -84,7 +105,12 @@ class _TimeSelectionState extends State<TimeSelection> {
               ),
               SizedBox(height: 30.0,),
             RaisedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => StartWorkout(widget.name, '40')));
+              },
               child: Text(
               '40 minutes full section',
               style: TextStyle(
