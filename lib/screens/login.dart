@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/homepage.dart';
-import '../screens/home.dart';
+import '../screens/navigate.dart';
 import '../services/auth.dart';
 
 class LoginPage extends StatelessWidget {
@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
           Text('Fitness Solution', style: TextStyle(
             fontSize: 35.0,
             color: Color.fromRGBO(91, 148, 240, 0.7),)),
-            SizedBox(height: 30.0,),
+            SizedBox(height: 50.0,),
           Body(),
         ],),
         ),
@@ -52,7 +52,7 @@ class _BodyState extends State<Body> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => Home(user.displayName)))
+                  builder: (context) => BotNavigate(user.displayName)))
         });
   }
 
