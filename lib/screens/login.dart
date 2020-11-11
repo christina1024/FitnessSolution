@@ -9,8 +9,23 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Fitness Solutions')),
-      body: Body(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/image1.jpg'),
+          fit: BoxFit.cover,
+          ),      
+        ),
+        child: Column(children: <Widget> [
+          SizedBox(height: 50.0),
+          Image.asset('assets/icon.jpg', height: 60.0,),
+          SizedBox(height: 10.0,),
+          Text('Fitness Solution', style: TextStyle(
+            fontSize: 35.0,
+            color: Color.fromRGBO(91, 148, 240, 0.7),)),
+            SizedBox(height: 30.0,),
+          Body(),
+        ],),
+        ),
     );
   }
 }
