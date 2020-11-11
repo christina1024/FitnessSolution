@@ -10,8 +10,6 @@ void main() => runApp(MaterialApp(
   initialRoute: '/login',
   routes: {
     '/login':(context) => LoginPage(),
-    //'/navigate':(context) => BotNavigate(),
-    '/timeSelection':(context) => TimeSelection(),
   },
 ));
 

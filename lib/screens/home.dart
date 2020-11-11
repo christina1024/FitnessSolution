@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:fitness_solution/screens/login.dart';
+import 'package:fitness_solution/screens/timeSelection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_solution/models/progress.dart';
@@ -108,9 +109,12 @@ class _HomeState extends State<Home> {
                     .toList(),
               )),
           RaisedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/timeSelection');
-            },
+            onPressed: (){
+                Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => TimeSelection(widget.name)));
+              },
             child: Text(
               'START WORKOUT',
               style: TextStyle(

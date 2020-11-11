@@ -3,7 +3,6 @@ import 'package:fitness_solution/screens/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_solution/screens/account.dart';
-import 'package:fitness_solution/screens/timeSelection.dart';
 import 'package:fitness_solution/screens/workoutPlan.dart';
 
 class BotNavigate extends StatefulWidget {
@@ -20,21 +19,21 @@ class _BotNavigate extends State<BotNavigate> {
     _currentIndex=index;
   });
 }
- // Widget build(BuildContext context) {
-
   
-   List<Widget> _children=[
-    Home('name'),
+   List<Widget> _children()=>[
+    Home(widget.name1),
     WorkoutPlan(),
     Account(),
     LoginPage(),
   ];
+  
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> children=_children();
     return Scaffold(
       
-      body: _children[_currentIndex], 
+      body: children[_currentIndex], 
       
       bottomNavigationBar: BottomNavigationBar
       (
@@ -44,7 +43,7 @@ class _BotNavigate extends State<BotNavigate> {
         items: [
         BottomNavigationBarItem(
             icon:   Icon(Icons.home),
-            title:  Text("Home"),
+            title:  Text('Home'),
             backgroundColor: Colors.blue,
     
           ),

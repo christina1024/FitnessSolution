@@ -3,6 +3,8 @@ import 'package:fitness_solution/screens/navigate.dart';
 import 'package:flutter/material.dart';
 
 class TimeSelection extends StatefulWidget {
+  final String name;
+  TimeSelection(this.name);
   @override
   _TimeSelectionState createState() => _TimeSelectionState();
 }
@@ -100,7 +102,7 @@ class _TimeSelectionState extends State<TimeSelection> {
                 Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => BotNavigate('h')));
+                  builder: (context) => BotNavigate(widget.name)));
               },
               child: Text(
               'Not a Good Time',
