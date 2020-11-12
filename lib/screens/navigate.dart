@@ -23,7 +23,7 @@ class _BotNavigate extends State<BotNavigate> {
    List<Widget> _children()=>[
     Home(widget.name1),
     WorkoutPlan(),
-    Account(),
+    Account(widget.name1),
     LoginPage(),
   ];
   
