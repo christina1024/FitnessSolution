@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 class Account extends StatefulWidget {
+  final String name;
+  Account(this.name);
   @override
   _AccountState createState() => _AccountState();
 }
@@ -16,11 +18,29 @@ class _AccountState extends State<Account> {
         ),
         child: Column(
         children: <Widget>[
-          SizedBox(height: 50.0,),
+          SizedBox(height: 30.0,),
           Text('My Account', style: TextStyle(
               fontSize: 30.0,
             ),),
             Container(),
+            SizedBox(height: 30.0,),
+            Container(
+            child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/icon.jpg'),
+                    radius: 45.0,
+                  ),
+          ),
+          SizedBox(height: 20.0,),
+          Text('Username: ' +widget.name, style: TextStyle(
+              fontSize: 20.0,
+            ),),
+          SizedBox(height: 20.0,),
+            RaisedButton(
+              onPressed: (){},
+              child: Text(
+                'Sync Calendar'
+              ),
+              )
           ]
     )
     )
