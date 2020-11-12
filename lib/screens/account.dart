@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 class Account extends StatefulWidget {
   final String name;
   Account(this.name);
@@ -7,6 +8,13 @@ class Account extends StatefulWidget {
 }
 
 class _AccountState extends State<Account> {
+  CalendarController _controller;
+
+  @override
+  void initState(){
+    super.initState();
+    _controller=CalendarController();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +24,8 @@ class _AccountState extends State<Account> {
           fit: BoxFit.cover,
           ),      
         ),
-        child: Column(
+        child: ListView(children: [
+        Column(
         children: <Widget>[
           SizedBox(height: 30.0,),
           Text('My Account', style: TextStyle(
@@ -35,14 +44,22 @@ class _AccountState extends State<Account> {
               fontSize: 20.0,
             ),),
           SizedBox(height: 20.0,),
-            RaisedButton(
+          RaisedButton(
               onPressed: (){},
               child: Text(
                 'Sync Calendar'
               ),
-              )
+              ),
+              SizedBox(height: 20.0,),
+          TableCalendar(
+            calendarStyle: CalendarStyle(
+              
+            ),
+            calendarController: _controller),
+            
           ]
     )
+    ],)
     )
     );
   }
