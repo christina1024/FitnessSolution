@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import '../screens/homepage.dart';
 import '../screens/navigate.dart';
 import '../services/auth.dart';
+import '../services/calendar.dart';
+import '../models/event.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -37,6 +39,7 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   FirebaseUser user;
+  List<Event> events;
 
   /// Logs the user out on every app restart
   @override
@@ -48,6 +51,7 @@ class _BodyState extends State<Body> {
   /// Signs user into Google account and transitions to HomePage
   void click() {
     signInWithGoogle().then((user) => {
+          // HttpService().getData(),
           this.user = user,
           Navigator.push(
               context,
