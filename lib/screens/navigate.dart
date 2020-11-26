@@ -24,7 +24,6 @@ class _BotNavigate extends State<BotNavigate> {
     Home(widget.name1),
     WorkoutPlan(),
     Account(widget.name1),
-    LoginPage(),
   ];
   
 
@@ -63,12 +62,6 @@ class _BotNavigate extends State<BotNavigate> {
     
           ),
         
-          BottomNavigationBarItem(
-            icon: Icon(Icons.logout),
-            title: Text('Logout'),
-            backgroundColor: Colors.blue,
-    
-          ),
           
         ],),
     );
