@@ -20,9 +20,8 @@ class _HomeState extends State<Home> {
     Progress(type: 'Push Ups', count: '200'),
     Progress(type: 'Sit Ups', count: '305'),
     Progress(type: 'Squat', count: '100'),
-    Progress(type: 'Push Ups', count: '200'),
-    Progress(type: 'Sit Ups', count: '305'),
-    Progress(type: 'Squat', count: '100'),
+    Progress(type: 'Lunges', count: '150'),
+    Progress(type: 'Planks', count: '50'),
   ];
 
   Widget progressTemplete(progress) {
@@ -93,7 +92,7 @@ class _HomeState extends State<Home> {
           ),),
           SizedBox(height: 20.0,),
           Text(
-            'Progress',
+            'Weekly Progress',
             textAlign: TextAlign.left,
             style: TextStyle(
               fontSize: 20.0,
