@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/homepage.dart';
-import '../screens/navigate.dart';
+import '../screens/notification.dart';
 import '../services/auth.dart';
 import '../services/calendar.dart';
 import '../models/event.dart';
@@ -56,7 +56,7 @@ class _BodyState extends State<Body> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => BotNavigate(user.displayName)))
+                  builder: (context) => LNotification(user.displayName)))
         });
   }
 

@@ -1,12 +1,14 @@
 import 'dart:ui';
-import 'package:fitness_solution/screens/login.dart';
+import 'package:fitness_solution/screens/notification.dart';
 import 'package:fitness_solution/screens/timeSelection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_solution/models/progress.dart';
 import 'package:fitness_solution/screens/navigate.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class Home extends StatefulWidget {
+  
   final String name;
   Home(this.name);
   @override
@@ -14,7 +16,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  //int _currentIndex=1;
   @override
   List<Progress> progress = [
     Progress(type: 'Push Ups', count: '200'),
@@ -108,7 +109,7 @@ class _HomeState extends State<Home> {
                     .toList(),
               )),
           RaisedButton(
-            onPressed: (){
+             onPressed: (){
                 Navigator.push(
               context,
               MaterialPageRoute(
