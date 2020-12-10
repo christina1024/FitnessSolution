@@ -1,8 +1,8 @@
-class Time {
+class Timed {
   DateTime startTime;
   DateTime endTime;
   
-  Time({DateTime startTime, DateTime endTime}) {
+  Timed({DateTime startTime, DateTime endTime}) {
     this.startTime = startTime;
     this.endTime = endTime;
   }

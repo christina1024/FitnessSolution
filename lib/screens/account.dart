@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import '../services/calendar.dart';
+
 class Account extends StatefulWidget {
   final String name;
   Account(this.name);
@@ -15,6 +17,12 @@ class _AccountState extends State<Account> {
     super.initState();
     _controller=CalendarController();
   }
+
+  /// Syncs calendar
+  void click() {
+    HttpService().getData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +53,7 @@ class _AccountState extends State<Account> {
             ),),
           SizedBox(height: 20.0,),
           RaisedButton(
-              onPressed: (){},
+              onPressed: this.click,
               child: Text(
                 'Sync Calendar'
               ),

@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 import '../screens/homepage.dart';
 import '../screens/notification.dart';
@@ -48,11 +50,18 @@ class _BodyState extends State<Body> {
     signOutGoogle();
   }
 
+  _write(String text) async {
+    final Directory directory = await getApplicationDocumentsDirectory();
+    final File file = File('${directory.path}/email.txt');
+    await file.writeAsString(text);
+  }
+
   /// Signs user into Google account and transitions to HomePage
   void click() {
     signInWithGoogle().then((user) => {
-          // HttpService().getData(),
+          HttpService().getData(),
           this.user = user,
+          _write(user.email),    
           Navigator.push(
               context,
               MaterialPageRoute(
